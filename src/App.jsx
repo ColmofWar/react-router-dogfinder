@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     async function loadDogs(){
-      const response = await axios.get("http://localhost:5173/dogs")
+      const response = await axios.get("http://localhost:5001/dogs")
       setDogs({
         data: response.data,
         isLoading: false
@@ -34,11 +34,11 @@ function App() {
     }
     loadDogs()
   }, [])
-/*
+
   if (dogs.isLoading) {
     return <h1>Loading...</h1>
   }
-*/
+
   return (
     <div>
       <h1>Welcome!</h1>
@@ -51,6 +51,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;
